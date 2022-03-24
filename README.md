@@ -1,4 +1,4 @@
-This is a repository to deploy [CrateDB]() on [balena.io](https://balena.io)
+This is a repository to deploy [CrateDB](https://crate.io/) on [balena.io](https://balena.io)
 
 ## Deploy the code
 
