@@ -1,0 +1,23 @@
+version: '2.1'
+volumes:
+  data:
+services:
+  cratedb:
+    image: crate:latest
+    ports:
+      - "4201:4200"
+    volumes:
+      - 'data: /tmp/crate'
+    command:
+      [
+        "crate",
+        "-Ccluster.name=crate-docker-cluster",
+        "-Cnode.name=cratedb",
+        "-Cnode.data=true",
+        "-Cnetwork.host=_site_",
+        "-Cgateway.expected_nodes=1",
+        "-Cgateway.recover_after_nodes=1"
+      ]
+    restart: on-failure
+    sysctls:
+      - vm.max_map_count=262144
