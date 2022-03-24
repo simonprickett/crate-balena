@@ -1,4 +1,4 @@
-This is a repository to deploy CrateDB on balena.io
+This is a repository to deploy [CrateDB]() on [balena.io](https://balena.io)
 
 ## Deploy the code
 
@@ -21,3 +21,10 @@ If you are a balena CLI expert, feel free to use balena CLI.
 - Using [Balena CLI](https://www.balena.io/docs/reference/cli/), push the code with `balena push <application-name>`
 - See the magic happening, your device is getting updated 🌟Over-The-Air🌟!
 
+## Start crateDB service
+
+As a WIP service you will need to open HostOS Terminal and type:
+
+`sysctl -w vm.max_map_count=262144`
+
+Then the crateDB service might start properly.
