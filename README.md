@@ -72,6 +72,10 @@ and now to launch the shell from Crash, we will need to get the internal http ad
 
 The address we are going to use will be `http_address=172.18.0.2:4200`.
 
+
+![crash-cratedb-balena](https://user-images.githubusercontent.com/173156/160127035-a582065e-b518-4fdd-9d35-f2def5aaf48a.png)
+
+
 Type again on the CrateDB Terminal and paste your `http_adress` where it says `<your_http_addres>`. In my case it was `172.18.0.2`.
 
 `./crash --host "http://<your_http_address>:4200" `
@@ -82,5 +86,6 @@ Add `--verbose` in case you want to know more, or you get a connection error.
 
 Copy your local IP address and paste it into your browser with the port 4201 and that might open the CrateDB UI.
 
+![crate-ui-balena](https://user-images.githubusercontent.com/173156/160127077-a720e83f-4c16-4251-b220-26782072ec6e.png)
 
 
