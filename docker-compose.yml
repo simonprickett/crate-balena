@@ -15,7 +15,7 @@ services:
         "-Ccluster.name=crate-docker-cluster",
         "-Cnode.name=cratedb",
         "-Cnode.data=true",
-        "-Cnetwork.host=_site_",
+        "-Cnetwork.host=_local_,_site_",
         "-Cgateway.expected_nodes=1",
         "-Cgateway.recover_after_nodes=1"
       ]
