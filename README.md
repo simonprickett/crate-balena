@@ -4,7 +4,45 @@ This project deploys [CrateDB](https://crate.io/) on [balena.io](https://balena.
 
 It runs on an ARM device such as Raspberry Pi 4 or x86 generic 64 bits device.
 
-## Requirements
+## Run it as a block
+
+We maintain images for this block on balenaHub Container Registry. The images can be accessed using:
+
+`bh.cr/marc6/cratedb-<arch>` at the moment only available on `aarch64`.
+
+For details on how to select a specific version or commit version of the image see our [documentation](https://github.com/balena-io/open-balena-registry-proxy/#usage).
+
+### docker-compose file
+
+To use this image, create a container in your `docker-compose.yml` file as shown below:
+
+```yaml
+version: '2.1'
+volumes:
+  data:
+services:
+  cratedb:
+    image: crate:latest
+    privileged: true
+    ports:
+      - "4200:4200"
+    volumes:
+      - 'data: /var/lib/crate'
+    command:
+      [
+        "crate",
+        "-Ccluster.name=crate-docker-cluster",
+        "-Cnode.name=cratedb",
+        "-Cnode.data=true",
+        "-Cnetwork.host=_local_,_site_",
+        "-Cgateway.expected_nodes=1",
+        "-Cgateway.recover_after_nodes=1"
+      ]
+    restart: on-failure
+
+```
+
+## Getting started
 
 ### Hardware
 
