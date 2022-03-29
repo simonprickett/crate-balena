@@ -6,9 +6,9 @@ services:
     image: crate:latest
     privileged: true
     ports:
-      - "4201:4200"
+      - "4200:4200"
     volumes:
-      - 'data: /tmp/crate'
+      - 'data: /var/lib/crate'
     command:
       [
         "crate",
