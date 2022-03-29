@@ -73,7 +73,7 @@ Add `--verbose` in case you want to know more, or you get a connection error.
 
 ### Access to the CrateDB UI
 
-Copy your local IP address and paste it into your browser with the port 4201 and that might open the CrateDB UI.
+Copy your local IP address and paste it into your browser with the port 4200 and that might open the CrateDB UI.
 
 ![crate-ui-balena](https://user-images.githubusercontent.com/173156/160127077-a720e83f-4c16-4251-b220-26782072ec6e.png)
 
