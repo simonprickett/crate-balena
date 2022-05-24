@@ -1,8 +1,8 @@
 name: cratedb
+type: sw.block
 description: >-
   Deploy Crate database instance running on balena.
 version: 0.1.0
-type: sw.application
 assets:
   repository:
     type: blob.asset
