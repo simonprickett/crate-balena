@@ -20,5 +20,5 @@ services:
         "-Cgateway.recover_after_nodes=1"
       ]
     restart: on-failure
-    #sysctls:
-    #  - "vm.max_map_count=262144"
+    sysctls:
+      - vm.max_map_count=262144
