@@ -36,7 +36,8 @@ services:
         "-Cnode.data=true",
         "-Cnetwork.host=_local_,_site_",
         "-Cgateway.expected_nodes=1",
-        "-Cgateway.recover_after_nodes=1"
+        "-Cgateway.recover_after_nodes=1",
+        -Cnode.store.allow_mmap=false
       ]
     restart: on-failure
 
